@@ -1,0 +1,108 @@
+// _modules.scss
+// ============
+
+header {
+  box-sizing: border-box;
+  text-align: center;
+
+  ul {
+    margin: 0px;
+    padding: 1% 5%;
+    list-style: none;
+    display: flex;
+    li > a {
+      transition: all 0.5s cubic-bezier(0, 0, 0, 0.75);
+      color: $white;
+      font-family: $headFont;
+      font-size: 0.85rem;
+        &:hover {
+        color: $peach;
+        background-color: $white;
+      }
+    }
+  }
+
+  #logo-svg > path {
+    fill: $white;
+      &:hover {
+        fill: complement($red);
+        transform-origin: 50% 80%;
+        transform: scale(1, 1.1);
+        transition: height .35s ease-in-out;
+      }
+  }
+
+  a {
+    text-decoration: none;
+    padding: 0px 5px;
+    color: $black;
+  }
+
+  #logo { 
+    height: 80px
+  }
+//colours
+//==========
+  .topbar {
+    background-color: $red;
+
+    #logo-sell {
+      color: $white;
+      margin: unset;
+      font-size: 0.75rem;
+      margin-left: 25rem;
+      padding-bottom: 5px;
+    }
+  }
+  .socialicons {
+    background-color: mix($red, $lgrey, 35);
+    i {
+      font-size: 1.25rem;
+      &:hover {
+        background-color: unset;
+      }
+    }
+  }
+  .sitenav {
+    background-color: mix($red, $lgrey, 15);
+  }
+  .editorialnav {
+    background-color: mix($red, $lgrey, 5);
+  }
+}
+
+// header {
+//   .flex-container {
+//     display: flex;
+//     flex-direction: row;
+//   }
+//   nav {
+//     flex: auto;
+//   }
+//   ul {
+//     margin: 0;
+//     padding: 0;
+//   }
+
+//   .topbar {
+//     background-color: $red;
+
+//     #logo {
+//       display: inline-block;
+//     }
+
+//     #logo-sell {
+//     color: $white;
+//     float: right;
+//     }
+//   }
+//   .socialicons {
+//     background-color: mix($red, $lgrey, 35);
+//   }
+//   .sitenav {
+//     background-color: mix($red, $lgrey, 15);
+//   }
+//   .editorialnav {
+//     background-color: mix($red, $lgrey, 5);
+//   }
+// }
