@@ -1,0 +1,19 @@
+body {
+  padding: 50px;
+  background-color: red;
+
+  p {
+    font-family: sans-serif;
+  }
+}
+
+:fullscreen a {
+  display: flex;
+}
+
+.example {
+  display: flex;
+  transition: all .5s;
+  user-select: none;
+  background: linear-gradient(to bottom, white, black);
+}

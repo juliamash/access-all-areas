@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h3 Latest News
+
+  ul
+    - for news in contentful.posts
+      li
+        h4= news.title
+        //- Find out if the post has an author. This sits in an array due to the many to many relationship set up in contentful
+        if news.author
+          h4 #{news.author[0].fields.name}
+          img(src=asset(news.author[0].fields.portrait))
+          h4: a(href= news.author[0]._url)= "Bio"
+        else
+          h4 No Author specified
+        p= news.date 
+        img(src=asset(news.image))
+        //- != marked(news.body)
+        h4: a(href= news._url)= "Read More"
+
+  //- for news in contentful.posts
+  //-   div!= JSON.stringify(news)
