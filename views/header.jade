@@ -128,6 +128,11 @@ header
           li
             a(href="https://twitter.com/Access_AA", target="_blank")
               i.fa.fa-twitter(aria-hidden="true")
+          form.searchbar
+            div
+              input(type="search")
+              button.searchbar-btn
+                i.fa.fa-search(aria-hidden="true")
     .sitenav
       .layout
         ul
@@ -146,8 +151,14 @@ header
         ul
           li
             a(href="/Latest News", title="Latest News") Latest News
-          li
-            a(href="/Features", title="Features") Features
+          .dropdown
+            li
+              a.dropbtn(href="/Features", title="Features") Features
+                i.fa.fa-caret-up(aria-hidden="true")
+              .dropdown-content
+                a.videos(href="/videos") videos
+                a.gallery(href="/gallery") gallery
+                a.podcast(href="/podcast") podcast
           li
             a(href="/Blogs", title="Blogs") Blogs
           li

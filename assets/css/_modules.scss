@@ -25,6 +25,16 @@ header {
         background-repeat: repeat;
       } //li achor:hover
     } //li anchor
+    li:nth-child(2) > i {
+      color: $white;
+    }
+    .fa-caret-up {
+      &:hover {
+        .fa-caret-up:before {
+          content: "\f0d7";
+        }
+      }
+    }
   } //ul
 
   #logo-svg > path {
@@ -77,6 +87,12 @@ header {
     i {
       font-size: 1.25rem;
     } //i
+    .searchbar {
+      margin-left: auto;
+    }
+    .searchbar-btn > i {
+      font-size: 13px;
+    }
   } //socialicons
 
   .sitenav {
@@ -87,6 +103,61 @@ header {
     background-color: mix($red, $lgrey, 5);
   } //editorialnav
 } //Header
+
+/* Dropdown Button */
+.dropbtn {
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    font-family: $headFont;
+    color: $black;
+    font-size: 0.85rem;
+    padding: 6px 8px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.videos {
+  background-color: $peach;
+}
+.gallery {
+  background-color: $cyan;
+}
+.podcast {
+  background-color: $pink;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: darken($white, 20);background-image: url(../img/bg/bg_wavey-neg-v2.gif);}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: $cyan;
+}
 
 // Footer
 // =====================================================
@@ -115,3 +186,9 @@ footer {
 
   }
 } //footer
+
+// ads
+// =====================================================
+.googlead.billboard {
+  margin: 20px auto;
+}
