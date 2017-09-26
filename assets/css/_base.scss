@@ -1,10 +1,17 @@
 // _base.scss
 // ==============
 
+html {
+	height: 100%;
+}
+
 body {
   @include reset;
   // padding: 50px;
   background-color: $white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 
   p {
     font-family: $bodyFont;
@@ -38,4 +45,5 @@ a.symbol:before {
 .layout {
 	max-width: 944px;
 	margin: 0 auto;
+	flex: 1 0 auto;
 }

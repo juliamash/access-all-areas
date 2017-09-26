@@ -21,6 +21,8 @@ header {
         &:hover {
         color: $dgrey;
         background-color: $white;
+        background-image: url(../img/bg/bg_wavey-neg-v2.gif);
+        background-repeat: repeat;
       } //li achor:hover
     } //li anchor
   } //ul
@@ -47,6 +49,11 @@ header {
 
   .topbar {
     background-color: $red;
+    transition: background-image 0.2s ease-in-out;
+      &:hover {
+        background-image: url(../img/bg/bg_wavey-pos.gif);
+        background-repeat: repeat;
+      }
 
     #logo-sell {
       color: $white;
@@ -81,5 +88,30 @@ header {
   } //editorialnav
 } //Header
 
-// ??????
+// Footer
 // =====================================================
+
+footer {
+  border-top: 5px solid $red;
+  background-color: darken($dgrey, 10);
+  flex-shrink: 0;
+  background-image: url(../img/bg/bg_wavey-pos.png);
+  background-repeat: repeat;
+
+  &:hover {
+    background-image: url(../img/bg/bg_wavey-pos.gif);
+  }
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $pink;
+    } //a:hover
+  } //anchor
+
+  h6 {
+    text-align: center;
+
+  }
+} //footer
