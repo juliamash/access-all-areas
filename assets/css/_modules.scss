@@ -92,6 +92,7 @@ header {
     }
     .searchbar-btn > i {
       font-size: 13px;
+      color: $black;
     }
   } //socialicons
 
@@ -192,3 +193,120 @@ footer {
 .googlead.billboard {
   margin: 20px auto;
 }
+
+// Excerpts
+// =====================================================
+.excerpt-container {
+  background-color: $dgrey;
+  .copy-container {
+    color: $white;
+    text-align: center;
+  }
+}
+
+
+// Latest news
+// =====================================================
+
+section.latest-news {
+  .section-label {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    h3 {
+    color: $white;
+    margin: 0;
+    float: right;
+    padding-right: 23px;
+    padding-top: 2px;
+    font-size: 1rem;
+    }
+    div:nth-child(1) {
+      background-color: $red;
+      width: 250px;
+    }
+    div:nth-child(2) {
+      background-color: lighten($red, 10);
+      width: 23px;
+      height: 23px;
+      display: inline;
+    }
+    div:nth-child(3) {
+      background-color: lighten($red, 20);
+      width: 23px;
+      height: 23px;
+      display: inline;
+    }
+    div:nth-child(4) {
+      background-color: lighten($red, 30);
+      width: 23px;
+      height: 23px;
+      display: inline;
+    }
+    .view {
+      margin-left: auto;
+      background-color: lighten($red, 20);
+      padding: 4px 5px 3px 5px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-family: $headFont;
+      color: $white;
+        &:hover {
+          background-image: url(../img/tom-view.gif);
+          background-repeat: no-repeat;
+          //background-position: center;
+          color: rgba(0, 0, 0, 0);;
+        }
+      }
+  } //section-label
+  .grid-container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-gap: 15px;
+    .grid-item {
+      margin: 20px;
+      padding-bottom: 5px;
+      background-color: darken($white,10);
+      width: 300px;
+      max-height: 270px;
+      .image-container {
+        position: relative;
+        height: 150px;
+        overflow: hidden;
+        img {
+        width: 100%;
+        }
+      }
+      .copy-container {
+        height: 100%;
+        max-height: 80px;
+        position: relative;
+        padding: 0 10px;
+        color: $black;
+        h4.headline {
+          padding-bottom: 10px;
+          overflow: hidden;
+        }
+        .author {
+          position:absolute;
+          bottom:0;
+          margin: 0;
+        }
+        i.author {
+          color: $red;
+        }
+        a {
+          text-decoration: none;
+        }
+        p.date {
+          position:absolute;
+          bottom:0;
+          right:5px;
+          margin: 0;
+          color: $dgrey;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+} //.latest-news

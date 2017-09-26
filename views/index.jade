@@ -1,27 +1,65 @@
 extends layout
 
-block content
+block ad-billboard
   .googlead.billboard
     img(src="http://via.placeholder.com/970x250", alt="billboard")
-      
-  .layout
-    h3 Latest News
 
-    ul
-      - for news in contentful.posts
-        li
-          h4= news.title
-          //- Find out if the post has an author. This sits in an array due to the many to many relationship set up in contentful
-          if news.author
-            h4 #{news.author[0].fields.name}
-            img(src=asset(news.author[0].fields.portrait))
-            h4: a(href= news.author[0]._url)= "Bio"
-          else
-            h4 No Author specified
-          p= news.date 
-          img(src=asset(news.image))
-          //- != marked(news.body)
-          h4: a(href= news._url)= "Read More"
+block ad-leaderboard
+  .googlead.billboard
+    img(src="http://via.placeholder.com/728x90", alt="billboard")
+
+block excerpt
+  .excerpt-container
+    .copy-container
+      h1 "This is some text yo"
+      h2 By: somebody
+
+block latest-news
+  section.latest-news
+    .layout
+      .section-label
+        div
+          h3 Latest News
+        div
+        div
+        div
+        a(href="/viewall").view view all
+
+    .layout
+      .grid-container
+        - for news in contentful.posts
+            .grid-item
+              .image-container
+                a(href= news._url)
+                  img(src=asset(news.image))
+              .copy-container
+                a(href= news._url)
+                  h4.headline= news.title
+                if news.author
+                  h4.author By: 
+                    i.author #{news.author[0].fields.name}
+                else
+                  h4.author By: 
+                    i.author Access team
+                p.date= news.date
+
+
+
+        //- ul
+        //-   - for news in contentful.posts
+        //-     li
+        //-       h4= news.title
+        //-       //- Find out if the post has an author. This sits in an array due to the many to many relationship set up in contentful
+        //-       if news.author
+        //-         h4 #{news.author[0].fields.name}
+        //-         img(src=asset(news.author[0].fields.portrait))
+        //-         h4: a(href= news.author[0]._url)= "Bio"
+        //-       else
+        //-         h4 No Author specified
+        //-       p= news.date 
+        //-       img(src=asset(news.image))
+        //-       //- != marked(news.body)
+        //-       h4: a(href= news._url)= "Read More"
 
   //- for news in contentful.posts
   //-   div!= JSON.stringify(news)
