@@ -10,7 +10,7 @@ module.exports =
 
   extensions: [
     contentful(config),
-    js_pipeline(files: 'assets/js/*.coffee'),
+    js_pipeline(files: 'assets/js/*.js'),
     css_pipeline(files: 'assets/css/*.scss')
   ]
 

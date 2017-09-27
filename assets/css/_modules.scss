@@ -276,27 +276,47 @@ section.latest-news {
         img {
         width: 100%;
         }
-      }
+      } //image-container
       .copy-container {
-        height: 100%;
-        max-height: 80px;
+        height: 70px;
+        // max-height: 70px;
         position: relative;
         padding: 0 10px;
         color: $black;
-        h4.headline {
-          padding-bottom: 10px;
+          a {
+            text-decoration: none;
+            color: $black;
+            &:visited {
+              color: $dgrey;
+            }
+            &:hover {
+              color: $peach;
+            }
+          } //anchors
+        .headline-container {
           overflow: hidden;
+          height: 50px;
+        }
+        h4.headline {
+          font-size: 30px;
+          margin: 0;
+          // overflow: hidden;
         }
         .author {
+          font-size: 0.75rem;
           position:absolute;
-          bottom:0;
           margin: 0;
+          width: 100%;
+          h4 {
+            color: blue;
+            left:0;
+            bottom:0;
+
+          }
         }
         i.author {
+          display: inline-block;
           color: $red;
-        }
-        a {
-          text-decoration: none;
         }
         p.date {
           position:absolute;
@@ -306,7 +326,7 @@ section.latest-news {
           color: $dgrey;
           font-size: 15px;
         }
-      }
-    }
-  }
+      } //.copy-container
+    } //.grid-item
+  } //.grid-container
 } //.latest-news

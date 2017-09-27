@@ -27,23 +27,63 @@ block latest-news
 
     .layout
       .grid-container
-        - for news in contentful.posts
+        - var count = 0;
+        each news in contentful.posts
+          if  count < 5 
             .grid-item
               .image-container
                 a(href= news._url)
                   img(src=asset(news.image))
               .copy-container
-                a(href= news._url)
-                  h4.headline= news.title
-                if news.author
-                  h4.author By: 
-                    i.author #{news.author[0].fields.name}
-                else
-                  h4.author By: 
-                    i.author Access team
-                p.date= news.date
+                .headline-container
+                  a(href= news._url)
+                    h4.headline= news.title
+                .author-container
+                  if news.author
+                    h4.author By: 
+                      i.author #{news.author[0].fields.name}
+                  else
+                    h4.author By: 
+                      i.author Access team
+                  p.date= news.date
+          - count++;
+        .grid-item
+          include ad-mpu
+
+block features
+  section.features
+    .layout
+      .section-label
+        div
+          h3 Features
+        div
+        div
+        div
+        a(href="/viewall").view view all
+
+    .layout
+      .grid-container
+        for features in contentful.features
+          h4.headline= features.title
+
+block blogs
+  section.blogs
+    .layout
+      .section-label
+        div
+          h3 Blogs
+        div
+        div
+        div
+        a(href="/viewall").view view all
+
+    .layout
+      .grid-container
+        for blogPost in contentful.blogPost
+          h4.headline= blogPost.title
 
 
+     
 
         //- ul
         //-   - for news in contentful.posts
