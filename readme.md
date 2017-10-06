@@ -6,6 +6,6 @@ Developing a new site for the live and outdoor event publication _[Access All Ar
 
 - make sure [node.js](http://nodejs.org) and [roots](http://roots.cx) are installed
 - clone this repo down and `cd` into the folder
-- copy over contentful.coffee
+- copy over `contentful.coffee`
 - run `npm install`
 - run `roots watch`
