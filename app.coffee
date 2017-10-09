@@ -16,6 +16,7 @@ module.exports =
 
   scss:
     includePaths: [
+      './assets/fonts/sheldon'
       './assets/img/bg'
       './assets/css/vendor'
       './node_modules/'

@@ -14,7 +14,19 @@ block excerpt
       for excerpt in contentful.excerpt
         .meta
           h2.article-name= excerpt.articleName
-          h3.article-author #{excerpt.author[0].fields.name}
+          h3.article-author by 
+            a #{excerpt.author[0].fields.name}
+        .quote-container
+          h1.quote &ldquo;#{excerpt.quote}&rdquo;
+
+block excerpt-v2
+  .excerpt-container-v2
+    .copy-container
+      for excerpt in contentful.excerpt
+        .meta
+          h2.article-name= excerpt.articleName
+          h3.article-author by 
+            a #{excerpt.author[0].fields.name}
         .quote-container
           h1.quote &ldquo;#{excerpt.quote}&rdquo;
 

@@ -200,15 +200,54 @@ footer {
   background-color: $dgrey;
   .copy-container {
     color: $white;
+  }
+} //.excerpt-container
+
+.excerpt-container-v2 {
+  @extends .excerpt-container;
+  background-color: darken($white,10);
+  .copy-container {
+    color: $dgrey;
+  }
+}
+
+.excerpt-container, .excerpt-container-v2 {
+  .copy-container {
     text-align: center;
+    width: 1200px;
+    margin: auto;
     .meta {
-      float: right;
+      float: left;
+      width: 47%;
+      text-align: right;
+      padding: 20px 0 20px 20px;
+      margin-top: 20px;
+      .article-author {
+        font-weight: lighter;
+        a {
+          color: lighten($red, 10);
+        }
+      }
     }
     .quote-container {
-      float: left;
+      float: right;
+      width: 47%;
+      text-align: left;
+      padding: 20px 20px 20px 0;
+      .quote {
+        // @include font-face(sheldon, "assets/fonts/sheldon");
+        // @include font-face(sheldon-feather, "assets/fonts/sheldon/light");
+        // @include font-face(sheldon-fly, "assets/fonts/sheldon/thin");
+        color: lighten($red, 10);
+        font-family: $quoteFont;
+      }
     }
   } //.copy-container
-} //.excerpt-container
+}
+
+
+
+
 
 
 // Latest news
