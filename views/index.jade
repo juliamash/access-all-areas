@@ -79,8 +79,26 @@ block features
 
     .layout
       .grid-container
-        for features in contentful.features
-          h4.headline= features.title
+        - var count = 0;
+        each features in contentful.features
+          if  count < 8 
+            .grid-item
+              .image-container
+                a(href= features._url)
+                  img(src=asset(features.image))
+              .copy-container
+                .headline-container
+                  a(href= features._url)
+                    h4.headline= features.title
+                .author-container
+                  if features.author
+                    h4.author By: 
+                      i.author #{features.author[0].fields.name}
+                  else
+                    h4.author By: 
+                      i.author Access team
+                  p.date= features.date
+          - count++;
 
 block blogs
   section.blogs
