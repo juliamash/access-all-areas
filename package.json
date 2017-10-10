@@ -1,6 +1,6 @@
 {
-  "name": "roots-sass",
-  "description": "Experimenting with roots and sass.",
+  "name": "access-all-areas",
+  "description": "A roots-contentful site for the publication Access All Areas.",
   "dependencies": {
     "autoprefixer": "^6.3.6",
     "coffee-script": "1.x",
