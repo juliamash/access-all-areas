@@ -386,55 +386,116 @@ section.latest-news {
 // =====================================================
 
 .features {
-  @extends .latest-news;
-  //   .section-label {
-  //   display: inline-flex;
-  //   justify-content: space-between;
-  //   width: 100%;
-  //   h3 {
-  //   color: $white;
-  //   margin: 0;
-  //   float: right;
-  //   padding-right: 23px;
-  //   padding-top: 2px;
-  //   font-size: 1rem;
-  //   } //h3
-  //   div:nth-child(1) {
-  //     background-color: $red;
-  //     width: 250px;
-  //   } //1st square
-  //   div:nth-child(2) {
-  //     background-color: lighten($red, 10);
-  //     width: 23px;
-  //     height: 23px;
-  //     display: inline;
-  //   } //2nd square
-  //   div:nth-child(3) {
-  //     background-color: lighten($red, 20);
-  //     width: 23px;
-  //     height: 23px;
-  //     display: inline;
-  //   } //3rd square
-  //   div:nth-child(4) {
-  //     background-color: lighten($red, 30);
-  //     width: 23px;
-  //     height: 23px;
-  //     display: inline;
-  //   } //4th sqaure
-  //   .view {
-  //     margin-left: auto;
-  //     background-color: lighten($red, 20);
-  //     padding: 4px 5px 3px 5px;
-  //     text-decoration: none;
-  //     font-size: 0.8rem;
-  //     font-family: $headFont;
-  //     color: $white;
-  //       &:hover {
-  //         background-image: url(../img/tom-view.gif);
-  //         background-repeat: no-repeat;
-  //         //background-position: center;
-  //         color: rgba(0, 0, 0, 0);;
-  //       } //view.hover
-  //     } //view
-  // } //section-label
-}
+  .image-container {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    img {
+    width: 100%;
+    // might have to remove this when we standardise image sizes
+    position: absolute;
+    bottom: -1rem;
+    } //image-container image
+  } //image-container
+  .copy-container {
+    height: 80px;
+    // max-height: 70px;
+    position: relative;
+    padding: 5px 10px;
+    color: $black;
+      a {
+        text-decoration: none;
+        color: $black;
+        &:visited {
+          color: $dgrey;
+        } //visited
+        &:hover {
+          color: $peach;
+        } //hover
+      } //anchors
+    .headline-container {
+      overflow: hidden;
+      height: 50px;
+    } //headline-container
+    h4.headline {
+      font-size: 30px;
+      margin: 0;
+      // overflow: hidden;
+    } // h4.headline
+    .author {
+      font-size: 0.75rem;
+      position:absolute;
+      margin: 0;
+      width: 100%;
+      h4 {
+        color: blue;
+        left:0;
+        bottom:0;
+
+      } //author h4
+    } //author
+    i.author {
+      display: inline-block;
+      color: $red;
+    } //i.author
+    p.date {
+      font-family: $headFont;
+      position:absolute;
+      bottom:0;
+      right:5px;
+      margin: 0;
+      color: $dgrey;
+      font-size: 0.8rem;
+    } //p.date
+  } //.copy-container
+  .item-no-0 {
+    grid-area: top;
+    // width: 100%;
+    .image-container {
+      height: 360px;
+    }
+    .copy-container {
+
+    }
+  }
+  .item-no-1 {
+    grid-area: mid-left;
+  }
+  .item-no-2 {
+    grid-area: mid-right;
+  }
+  .item-no-3 {
+    grid-area: bottom-left;
+  }
+  .item-no-4 {
+    grid-area: bottom-right;
+  }
+  .grid-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(50%, 50%);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: 
+      "top top"
+      "mid-left mid-right"
+      "bottom-left bottom-right";
+    grid-gap: 25px;
+    margin: 0 auto;
+    justify-content: space-around;
+    .grid-item {
+      // margin: -20px;
+      padding-bottom: 5px;
+      background-color: darken($white,10);
+      // width: 340px;
+      // max-height: 270px;
+      // grid-row: 2;
+      // &:first-of-type{
+      //   // width: 100%;
+      //   grid-row: 1;
+      // }
+    } //.grid-item
+  } //.grid-container
+  .layout {
+    padding-bottom: 50px;
+  }
+} //.features

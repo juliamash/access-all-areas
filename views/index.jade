@@ -81,8 +81,8 @@ block features
       .grid-container
         - var count = 0;
         each features in contentful.features
-          if  count < 8 
-            .grid-item
+          if  count < 5 
+            .grid-item(class="item-no-#{ count }")
               .image-container
                 a(href= features._url)
                   img(src=asset(features.image))
@@ -113,8 +113,26 @@ block blogs
 
     .layout
       .grid-container
-        for blogPost in contentful.blogPost
-          h4.headline= blogPost.title
+        - var count = 0;
+        each blogPost in contentful.blogPost
+          if  count < 8 
+            .grid-item
+              .image-container
+                a(href= blogPost._url)
+                  img(src=asset(blogPost.image))
+              .copy-container
+                .headline-container
+                  a(href= blogPost._url)
+                    h4.headline= blogPost.title
+                .author-container
+                  if blogPost.author
+                    h4.author By: 
+                      i.author #{blogPost.author[0].fields.name}
+                  else
+                    h4.author By: 
+                      i.author Access team
+                  p.date= blogPost.date
+          - count++;
 
 
      
