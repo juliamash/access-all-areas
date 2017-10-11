@@ -40,8 +40,6 @@ block latest-news
         div
         div
         a(href="/viewall").view view all
-
-    .layout
       .grid-container
         - var count = 0;
         each news in contentful.posts
@@ -76,8 +74,6 @@ block features
         div
         div
         a(href="/viewall").view view all
-
-    .layout
       .grid-container
         - var count = 0;
         each features in contentful.features
@@ -110,8 +106,6 @@ block blogs
         div
         div
         a(href="/viewall").view view all
-
-    .layout
       .grid-container
         - var count = 0;
         each blogPost in contentful.blogPost
@@ -136,6 +130,8 @@ block blogs
                       i.author Access team
                   p.date= blogPost.date
           - count++;
+
+
 
 
      

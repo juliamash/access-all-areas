@@ -1,8 +1,39 @@
 extends layout
 
-block latest-news
-  h4= entry.title
-  p= entry.date
-  p= entry.author
-  img(src=asset(entry.image))
-  != markdown(entry.body)
+block article
+  article
+      if entry.featureImage
+        .article-feat-image-container
+          img(src=asset(entry.image))
+        .layout
+          .headline-container
+            h1.headline= entry.title
+          if entry.author
+            .author-portrait-container
+              img.author-portrait(src=asset(entry.author[0].fields.portrait))
+            h4.author By:
+              i.author #{entry.author[0].fields.name}
+          else
+            h4.author By: 
+              i.author Access team
+          p= entry.date
+          != markdown(entry.body)
+      else
+        .layout
+          .headline-container
+            h1.headline= entry.title
+          .article-image-container
+            img(src=asset(entry.image))
+          if entry.author
+            .author-portrait-container
+              img.author-portrait(src=asset(entry.author[0].fields.portrait))
+            h4.author By:
+              i.author #{entry.author[0].fields.name}
+          else
+            h4.author By: 
+              i.author Access team
+          p= entry.date
+          != markdown(entry.body)
+
+
+  //- div!= JSON.stringify(entry.author)
