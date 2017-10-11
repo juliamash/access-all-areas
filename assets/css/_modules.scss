@@ -1,193 +1,6 @@
 // _modules.scss
 // ============
 
-// Header
-// =====================================================
-header {
-  box-sizing: border-box;
-  text-align: center;
-
-  ul {
-    margin: 0px;
-    padding: 1% 5%;
-    list-style: none;
-    display: flex;
-    li > a {
-      transition: all 0.5s cubic-bezier(0, 0, 0, 0.75);
-      color: $white;
-      font-family: $headFont;
-      font-size: 0.85rem;
-        &:hover {
-        color: $dgrey;
-        background-color: $white;
-        background-image: url(../img/bg/bg_wavey-neg-v2.gif);
-        background-repeat: repeat;
-      } //li achor:hover
-    } //li anchor
-    li:nth-child(2) > i {
-      color: $white;
-    } //li:nth-child(2)
-    .fa-caret-up {
-      &:hover {
-        .fa-caret-up:before {
-          content: "\f0d7";
-        } //.fa-caret-up:hover:before
-      } //.fa-caret-up:hover
-    } //.fa-caret-up
-  } //ul
-
-  #logo-svg > path {
-    fill: $white;
-      &:hover {
-        fill: complement($red);
-        transform-origin: 50% 80%;
-        transform: scale(1, 1.1);
-        transition: height .35s ease-in-out;
-      } //logo-svg:hover
-  } //logo-svg
-
-  a {
-    text-decoration: none;
-    padding: 0px 5px;
-    color: $black;
-  } //anchor
-
-  #logo { 
-    height: 80px
-  } //logo
-
-  .topbar {
-    background-color: $red;
-    transition: background-image 0.2s ease-in-out;
-      &:hover {
-        background-image: url(../img/bg/bg_wavey-pos.gif);
-        background-repeat: repeat;
-      } //topbar:hover
-
-    #logo-sell {
-      color: $white;
-      margin: unset;
-      font-size: 0.75rem;
-      margin-left: 25rem;
-      padding-bottom: 5px;
-    } //logo-sell
-  } //topbar
-
-  .socialicons {
-    background-color: mix($red, $lgrey, 35);
-
-    a {
-      &:hover {
-        background-color: unset;
-        color: $dgrey;
-      } //socialicons anchor:hover
-    } //socialicons anchor
-
-    i {
-      font-size: 1.25rem;
-    } //i
-    .searchbar {
-      margin-left: auto;
-    } //.searchbar
-    .searchbar-btn > i {
-      font-size: 13px;
-      color: $black;
-    } //.searchbar-btn
-  } //socialicons
-
-  .sitenav {
-    background-color: mix($red, $lgrey, 15);
-  } //sitenav
-
-  .editorialnav {
-    background-color: mix($red, $lgrey, 5);
-  } //editorialnav
-
-  /* Dropdown Button */
-  .dropbtn {
-    border: none;
-    cursor: pointer;
-  } //.dropdownbutton
-
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  } //.dropdown
-
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: $white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    /* Links inside the dropdown */
-    a {
-      font-family: $headFont;
-      color: $black;
-      font-size: 0.85rem;
-      padding: 6px 8px;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-      /* Change color of dropdown links on hover */
-      &:hover {
-        background-color: darken($white, 20);
-        background-image: url(../img/bg/bg_wavey-neg-v2.gif);
-        } ////.dropdown-content anchor:hover
-    } //.dropdown-content anchor
-  } //.dropdown-content
-
-  .videos {
-    background-color: $peach;
-  }
-  .gallery {
-    background-color: $cyan;
-  }
-  .podcast {
-    background-color: $pink;
-  }
-
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-      display: block;
-  }
-
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {
-      background-color: $cyan;
-  }
-} //Header
-
-
-// Footer
-// =====================================================
-footer {
-  border-top: 5px solid $red;
-  background-color: darken($dgrey, 10);
-  flex-shrink: 0;
-  background-image: url(../img/bg/bg_wavey-pos.png);
-  background-repeat: repeat;
-
-  &:hover {
-    background-image: url(../img/bg/bg_wavey-pos.gif);
-  } //footer:hover
-
-  a {
-    color: $white;
-
-    &:hover {
-      color: $pink;
-    } //a:hover
-  } //anchor
-
-  h6 {
-    text-align: center;
-  } //h6
-} //footer
-
 // ads
 // =====================================================
 .googlead.billboard {
@@ -298,6 +111,70 @@ footer {
       } //view
   } //section-label
 
+// Content Cards
+// =====================================================
+.image-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  img {
+  width: 100%;
+  // might have to remove this when we standardise image sizes
+  position: absolute;
+  bottom: -1rem;
+  } //image-container image
+} //image-container
+.copy-container {
+  height: 80px;
+  // max-height: 70px;
+  position: relative;
+  padding: 5px 10px;
+  color: $black;
+    a {
+      text-decoration: none;
+      color: $black;
+      &:visited {
+        color: $dgrey;
+      } //visited
+      &:hover {
+        color: $peach;
+      } //hover
+    } //anchors
+  .headline-container {
+    overflow: hidden;
+    height: 50px;
+  } //headline-container
+  h4.headline {
+    font-size: 30px;
+    margin: 0;
+    // overflow: hidden;
+  } // h4.headline
+  .author {
+    font-size: 0.75rem;
+    position:absolute;
+    margin: 0;
+    width: 100%;
+    h4 {
+      color: blue;
+      left:0;
+      bottom:0;
+    } //author h4
+  } //author
+  i.author {
+    display: inline-block;
+    color: $red;
+  } //i.author
+  p.date {
+    font-family: $headFont;
+    position:absolute;
+    bottom:0;
+    right:5px;
+    margin: 0;
+    color: $dgrey;
+    font-size: 0.8rem;
+  } //p.date
+} //.copy-container
+
 // Latest news
 // =====================================================
 section.latest-news {
@@ -313,71 +190,18 @@ section.latest-news {
       width: 340px;
       max-height: 270px;
       .image-container {
-        position: relative;
         height: 180px;
-        overflow: hidden;
-        img {
-        width: 100%;
-        } //image-container image
       } //image-container
       .copy-container {
         height: 80px;
-        // max-height: 70px;
-        position: relative;
-        padding: 0 10px;
-        color: $black;
-          a {
-            text-decoration: none;
-            color: $black;
-            &:visited {
-              color: $dgrey;
-            } //visited
-            &:hover {
-              color: $peach;
-            } //hover
-          } //anchors
-        .headline-container {
-          overflow: hidden;
-          height: 50px;
-        } //headline-container
-        h4.headline {
-          font-size: 30px;
-          margin: 0;
-          // overflow: hidden;
-        } // h4.headline
-        .author {
-          font-size: 0.75rem;
-          position:absolute;
-          margin: 0;
-          width: 100%;
-          h4 {
-            color: blue;
-            left:0;
-            bottom:0;
-
-          } //author h4
-        } //author
-        i.author {
-          display: inline-block;
-          color: $red;
-        } //i.author
-        p.date {
-          font-family: $headFont;
-          position:absolute;
-          bottom:0;
-          right:5px;
-          margin: 0;
-          color: $dgrey;
-          font-size: 0.8rem;
-        } //p.date
-      } //.copy-container
+      }
     } //.grid-item
     .grid-item-mpu {
         margin: auto;
         justify-content: space-around;
         position: relative;
         bottom: 7px;
-      } //.grid-item-mpu
+    } //.grid-item-mpu
   } //.grid-container
 } //.latest-news
 
@@ -386,68 +210,6 @@ section.latest-news {
 // =====================================================
 
 .features {
-  .image-container {
-    position: relative;
-    height: 250px;
-    overflow: hidden;
-    img {
-    width: 100%;
-    // might have to remove this when we standardise image sizes
-    position: absolute;
-    bottom: -1rem;
-    } //image-container image
-  } //image-container
-  .copy-container {
-    height: 80px;
-    // max-height: 70px;
-    position: relative;
-    padding: 5px 10px;
-    color: $black;
-      a {
-        text-decoration: none;
-        color: $black;
-        &:visited {
-          color: $dgrey;
-        } //visited
-        &:hover {
-          color: $peach;
-        } //hover
-      } //anchors
-    .headline-container {
-      overflow: hidden;
-      height: 50px;
-    } //headline-container
-    h4.headline {
-      font-size: 30px;
-      margin: 0;
-      // overflow: hidden;
-    } // h4.headline
-    .author {
-      font-size: 0.75rem;
-      position:absolute;
-      margin: 0;
-      width: 100%;
-      h4 {
-        color: blue;
-        left:0;
-        bottom:0;
-
-      } //author h4
-    } //author
-    i.author {
-      display: inline-block;
-      color: $red;
-    } //i.author
-    p.date {
-      font-family: $headFont;
-      position:absolute;
-      bottom:0;
-      right:5px;
-      margin: 0;
-      color: $dgrey;
-      font-size: 0.8rem;
-    } //p.date
-  } //.copy-container
   .item-no-0 {
     grid-area: top;
     // width: 100%;
