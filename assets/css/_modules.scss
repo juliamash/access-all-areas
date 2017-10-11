@@ -119,9 +119,6 @@
   overflow: hidden;
   img {
   width: 100%;
-  // might have to remove this when we standardise image sizes
-  position: absolute;
-  bottom: -1rem;
   } //image-container image
 } //image-container
 .copy-container {
@@ -147,7 +144,6 @@
   h4.headline {
     font-size: 30px;
     margin: 0;
-    // overflow: hidden;
   } // h4.headline
   .author {
     font-size: 0.75rem;
@@ -255,9 +251,94 @@ section.latest-news {
       //   // width: 100%;
       //   grid-row: 1;
       // }
+      .image-container {
+        img {
+          // might have to remove this when we standardise image sizes
+          position: absolute;
+          bottom: -1rem;
+        }
+      }
     } //.grid-item
   } //.grid-container
   .layout {
     padding-bottom: 50px;
   }
 } //.features
+
+// Blogs
+// =====================================================
+
+.blogs {
+  .item-no-0 {
+    grid-area: top-left;
+  }
+  .item-no-1 {
+    grid-area: top-right;
+  }
+  .item-no-2 {
+    grid-area: mid-left;
+  }
+  .item-no-3 {
+    grid-area: mid-right;
+  }
+  .item-no-4 {
+    grid-area: bottom-left;
+  }
+  .item-no-5 {
+    grid-area: bottom-right;
+  }
+  .grid-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(33.33%, 33.33%, 33.33%);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: 
+      "top-left top-left top-right"
+      "mid-left mid-right mid-right"
+      "bottom-left bottom-left bottom-right";
+    grid-gap: 25px;
+    margin: 0 auto;
+    justify-content: space-around;
+    .grid-item {
+      // margin: -20px;
+      padding-bottom: 5px;
+      background-color: darken($white,10);
+      // width: 340px;
+      // max-height: 270px;
+      // grid-row: 2;
+      // &:first-of-type{
+      //   // width: 100%;
+      //   grid-row: 1;
+      // }
+      // .image-container {
+      //   img:nth-of-type(odd) {
+      //     // might have to remove this when we standardise image sizes
+      //     // position: absolute;
+      //     // bottom: -1rem;
+      //   }
+      // }
+    } //.grid-item
+  } //.grid-container
+  .grid-item:nth-of-type(odd) {
+    .image-container {
+      img {
+        // might have to remove this when we standardise image sizes
+        position: absolute;
+        bottom: -1rem;
+      }
+    }
+  }
+  .layout {
+    padding-bottom: 50px;
+  }
+  .author-portrait-container {
+    position: absolute;
+  }
+  .author-portrait {
+    position: relative;
+    width: 50px;
+    border-radius: 50%;
+    bottom: 55px;
+    left: 7px;
+  }
+}

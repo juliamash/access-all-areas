@@ -115,11 +115,14 @@ block blogs
       .grid-container
         - var count = 0;
         each blogPost in contentful.blogPost
-          if  count < 8 
-            .grid-item
+          if  count < 6 
+            .grid-item(class="item-no-#{ count }")
               .image-container
                 a(href= blogPost._url)
                   img(src=asset(blogPost.image))
+              if blogPost.author
+                .author-portrait-container
+                  img.author-portrait(src=asset(blogPost.author[0].fields.portrait))
               .copy-container
                 .headline-container
                   a(href= blogPost._url)
