@@ -7,6 +7,16 @@
   margin: 20px auto;
 } //.googlead.billboard
 
+.googlead.leaderboard {
+  margin: 20px auto;
+} //.googlead.leaderboard
+
+.googlead.skyscraper {
+  img {
+    margin: 0 0 0 20px;
+  }
+} //.googlead.skyscraper
+
 // Excerpts
 // =====================================================
 .excerpt-container {
@@ -315,22 +325,144 @@ section.latest-news {
 // Articles
 // =====================================================
 
+.article-feat-image-container {
+  img {
+    width: 100%;
+  }
+}
+.article-image-container {
+  img {
+    width: 100%;
+  }
+}
+
 article {
-  .article-feat-image-container {
+  float: left;
+  width: 70%;
+
+  .content-container {
+    color: $black;
+    width: 100%;
     img {
       width: 100%;
     }
-  }
-  .headline-container {
-    height: 10em;
-    .headline {
-      @include reset
-      color: $black;
-      font-size: 4rem;
+    blockquote::before{
+      content: "\201C"; /*Unicode for Left Double Quote*/
+      
+      /*Font*/
+      // font-family: Georgia, serif;
+      font-family: $quoteFont;
+      font-size: 100px;
+      font-weight: bold;
+      color: $white;
+      
+      /*Positioning*/
+      position: absolute;
+      left: 10px;
+      top:5px;
     }
+    blockquote {
+      display:block;
+      margin: auto;
+      margin-left: -35%;
+      padding: 2rem 2rem 2rem 30%;
+      position: relative;
+      background-color: $red;
+      color: $white;
+      @include headings {
+        font-size: 2.5rem;
+        font-family: $quoteFont;
+      }
+      p {
+        font-size: 2rem;
+        font-family: $quoteFont;
+      }
+      a {
+        text-decoration: none;
+        background-color: complement($red);
+        color: $white;
+        cursor: pointer;
+      }
+    }
+    // blockquote{
+    //   display:block;
+    //   background: lighten($white, 10);
+    //   padding: 15px 20px 15px 45px;
+    //   margin: 0 0 20px;
+    //   position: relative;
+      
+    //   /*Font*/
+    //   font-family: Georgia, serif;
+    //   font-size: 16px;
+    //   line-height: 1.2;
+    //   color: #666;
+    //   text-align: justify;
+      
+    //   /*Borders - (Optional)*/
+    //   border-left: 15px solid $red;
+    //   border-right: 2px solid $red;
+      
+    //   /*Box Shadow - (Optional)*/
+    //   -moz-box-shadow: 2px 2px 15px #ccc;
+    //   -webkit-box-shadow: 2px 2px 15px #ccc;
+    //   box-shadow: 2px 2px 15px #ccc;
+    // }
+
+
+
+    // blockquote::after{
+    //   /*Reset to make sure*/
+    //   content: "";
+    // }
+
+    // blockquote a{
+      
+    //   padding: 0 3px;
+    //   color: #c76c0c;
+    // }
+
+    // blockquote a:hover{
+    //  color: #666;
+    // }
+
+    // blockquote em{
+    //   font-style: italic;
+    // }
   }
-  .author-portrait {
-    width: 70px;
-    border-radius: 50%;
+} //article
+
+.author-portrait {
+  width: 70px;
+  border-radius: 50%;
+}
+
+.headline-container {
+  // height: 100%;
+  .headline {
+    @include reset
+    color: $black;
+    font-size: 4rem;
   }
+}
+
+.feat-image {
+  width: 100%;
+}
+
+.feat-image-article-content {
+  width: 70%;
+  float: left;
+}
+
+aside {
+  position: sticky;
+  top: 20px;
+  // Do not remove. This stops this element from covering over links etc...
+  float: right;
+  // right: 1px;
+  // width: 300px;
+}
+
+aside.feat-image {
+  float: none;
 }
