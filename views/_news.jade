@@ -12,12 +12,15 @@ block article
           if entry.author
             .author-portrait-container
               img.author-portrait(src=asset(entry.author[0].fields.portrait))
-            h4.author By:
-              i.author #{entry.author[0].fields.name}
+            .article-author-container
+              h4.author By:
+                i.author #{entry.author[0].fields.name}
           else
-            h4.author By: 
-              i.author Access team
-          p= entry.date
+            .article-author-container
+              h4.author By: 
+                i.author Access team
+          .article-date-container
+            p= entry.date
           .content-container
             != markdown(entry.body)
       aside.feat-image
@@ -27,19 +30,23 @@ block article
       .headline-container
         h1.headline= entry.title
       article
-        .article-image-container
-          img(src=asset(entry.image))
-        if entry.author
-          .author-portrait-container
-            img.author-portrait(src=asset(entry.author[0].fields.portrait))
-          h4.author By:
-            i.author #{entry.author[0].fields.name}
-        else
-          h4.author By: 
-            i.author Access team
-        p= entry.date
-        .content-container
-          != markdown(entry.body)
+        .article-meta-container
+          .article-image-container
+            img(src=asset(entry.image))
+          if entry.author
+            .author-portrait-container
+              img.author-portrait(src=asset(entry.author[0].fields.portrait))
+            .article-author-container
+              h4.author By:
+                i.author #{entry.author[0].fields.name}
+          else
+            .article-author-container
+              h4.author By: 
+                i.author Access team
+          .article-date-container
+            p= entry.date
+          .content-container
+            != markdown(entry.body)
       aside
         include ad-skyscraper
 

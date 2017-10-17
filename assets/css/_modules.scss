@@ -14,6 +14,8 @@
 .googlead.skyscraper {
   img {
     margin: 0 0 0 20px;
+    // hack to stop anchor tag occlusion
+    visibility: initial;
   }
 } //.googlead.skyscraper
 
@@ -341,6 +343,8 @@ article {
   width: 70%;
 
   .content-container {
+    clear: both;
+    display: block;
     color: $black;
     width: 100%;
     img {
@@ -429,7 +433,42 @@ article {
     //   font-style: italic;
     // }
   }
+
 } //article
+
+.article-meta-container {
+  width: 100%;
+}
+
+.author-portrait-container {
+  float: left;
+}
+
+.article-author-container {
+  color: $dgrey;
+  margin-left: 5px;
+  float: left;
+  // need to add anchor tag styles here
+  i {
+    color: $red;
+  }
+  h4 {
+    padding-top: 3px;
+  }
+}
+
+.article-date-container {
+  position: relative;
+  float: right;
+  right: 5px;
+  p {
+    font-size: 0.9rem;
+    font-family: $headFont;
+    background-color: $dgrey;
+    color: $white;
+    padding: 2px 5px 1px 5px;
+  }
+}
 
 .author-portrait {
   width: 70px;
@@ -450,6 +489,7 @@ article {
 }
 
 .feat-image-article-content {
+  clear: right;
   width: 70%;
   float: left;
 }
@@ -465,4 +505,6 @@ aside {
 
 aside.feat-image {
   float: none;
+  // hack to stop anchor tag occlusion
+  visibility: hidden;
 }
