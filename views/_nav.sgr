@@ -1,0 +1,12 @@
+nav
+  a(href="#")
+    img(src="img/logo.svg", alt="logo")
+  section
+    a(href="/news") News
+    a(href="/features") Features
+    a(href="/blogs") Blogs
+    a(href="/interviews") Interviews
+    a(href="/analysis") Analysis
+    a(href="/event-listings") Event Listings
+    a(href="/white-book") White Book
+  a.cta(href="/subscribe") Subscribe

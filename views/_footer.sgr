@@ -1,0 +1,42 @@
+footer.grid
+  .social
+    i twitter
+    i instagram
+    i linkedin
+  .contact
+    h3 Contact
+    address.white-space
+      | Mash Media Group
+      | 17 Union St
+      | Kingston upon Thames
+      | KT1 1RR
+    p.white-space
+      | T: 020 8481 1136 (Editorial)
+      | online editor
+      | mgonzalez@mashmedia.net
+      | Senior reporter
+      | nmacdonald@mashmedia.net
+      | T: 020 8481 1122 (Sales)
+      | Sales director
+      | jlinin@mashmedia.net
+  .magazine
+    h3 Magazine Subscription
+    p For more infomation on our free magazine subscription contact or to report a change of address contact circulation:
+    p.white-space
+      | Bret Weekes
+      | T: 020 8481 1122
+      | circulation@mashmedia.net
+    //- subscribe banner here
+  .newsletter
+    h3 Newsletter
+    p Sign up for our email newsletter and stay updated on all our latest storys and features
+    //- sign up form here
+  .info
+    h3 Information
+    a(href="/issues") Issues
+    a(href="/newsletter") Newsletter
+    a(href="/about") About us
+    a(href="/advertising") Advertising
+    a(href="/contact") Contact us
+  .license
+    a(href="http://www.mashmedia.net") &copy;Mash Media Group Limited 2017

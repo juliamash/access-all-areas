@@ -1,0 +1,62 @@
+extends(src="layout.sgr")
+  block(name="content")
+    .ad-leaderboard
+      img(src="http://placehold.it/728x90/969696/CCCCCC?text=Leaderboard", alt="")
+    h3 Latest News
+    .news.grid
+      .spot
+        img(src="http://placehold.it/615x376", alt="")
+        date 21 January 2017
+        h2 title
+      .card
+        img(src="http://placehold.it/300x153", alt="")
+        date 21 January 2017
+        h2 title
+      .card
+        img(src="http://placehold.it/300x153", alt="")
+        date 21 January 2017
+        h2 title
+      .card
+        img(src="http://placehold.it/300x153", alt="")
+        date 21 January 2017
+        h2 title
+      .card
+        img(src="http://placehold.it/300x153", alt="")
+        date 21 January 2017
+        h2 title
+    h3 Features
+    .features.grid
+      .card
+        img(src="http://placehold.it/300x153", alt="")
+        date 21 January 2017
+        h2 title
+      .card
+        img(src="http://placehold.it/300x153", alt="")
+        date 21 January 2017
+        h2 title
+      .spot
+        img(src="http://placehold.it/615x376", alt="")
+        date 21 January 2017
+        h2 title
+      .ad-filmstrip
+        img(src="http://placehold.it/300x600/969696/CCCCCC?text=Filmstrip", alt="")
+    .ad-leaderboard
+      img(src="http://placehold.it/728x90/969696/CCCCCC?text=Leaderboard", alt="")
+    h3 Blogs
+    .blogs.grid
+      .card
+        img(src="http://placehold.it/300x167", alt="")
+        date 21 January 2017
+        h2 title
+      .card
+        img(src="http://placehold.it/300x167", alt="")
+        date 21 January 2017
+        h2 title
+      .card
+        img(src="http://placehold.it/300x167", alt="")
+        date 21 January 2017
+        h2 title
+      .card
+        img(src="http://placehold.it/300x167", alt="")
+        date 21 January 2017
+        h2 title

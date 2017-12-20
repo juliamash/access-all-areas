@@ -1,0 +1,42 @@
+.warning-message
+  background-color: tomato
+  color: white
+  position: fixed
+  top: 40%
+  left: 30%
+  padding: 15px
+
+
+@supports (display: grid)
+  .warning-message
+    display: none
+
+  // there must be a shorthand for these ?
+  .news
+    & .spot
+      grid-column-start: 1
+      grid-column-end: 3
+      grid-row-start: 1
+      grid-row-end: 3
+
+  .features
+    & .spot
+      grid-column-start: 2
+      grid-column-end: 4
+      grid-row-start: 1
+      grid-row-end: 3
+    & .ad-filmstrip
+      grid-column-start: 4
+      grid-column-end: 5
+      grid-row-start: 1
+      grid-row-end: 3
+
+  footer
+    & .social,
+    & .license
+      grid-column: span 4
+
+  .grid
+    display: grid
+    grid-gap: 15px
+    grid-template-columns: 1fr 1fr 1fr 1fr

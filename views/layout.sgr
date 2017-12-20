@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="description" content="")
+    meta(name="author" content="synj24")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    block(name="title")
+      title Access All Areas
+
+    link(rel="stylesheet" href="css/index.css")
+
+  body
+    include(src="_nav.sgr")
+    .warning-message
+      h3 Some features of this site are not supported in your browser
+    main(role="main" id="{{ pageId }}")
+      block(name="content")
+    include(src="_footer.sgr")
+
+    block(name="javascript")
+      script(src="js/main.js" defer)
