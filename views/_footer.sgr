@@ -6,10 +6,11 @@ footer.grid
   .contact
     h3 Contact
     address.white-space
-      | Mash Media Group
-      | 17 Union St
-      | Kingston upon Thames
-      | KT1 1RR
+      p
+        | Mash Media Group
+        | 17 Union St
+        | Kingston upon Thames
+        | KT1 1RR
     p.white-space
       | T: 020 8481 1136 (Editorial)
       | online editor
