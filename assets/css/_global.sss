@@ -38,10 +38,17 @@ h4
 
 .g-label
   background-color: var(--brown)
+  color: var(--white)
   width: 74.7%
+  height: 33px
+  text-align: center
+  //this isn't working
+  vertical-align: 50%
+  line-height: 2.275em
 
-.g-label:after
+.g-label::after
   background-color: var(--dark)
-  content: "&nbsp;"
+  content: '\00A0'
   width: 85%
   float: right
+  height: 100%
