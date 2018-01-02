@@ -2,7 +2,7 @@ extends(src="layout.sgr")
   block(name="content")
     .ad-leaderboard
       img(src="http://placehold.it/728x90/969696/CCCCCC?text=Leaderboard", alt="")
-    h4 Latest News
+    h4.g-label Latest News
     .news.grid
       .spot
         img(src="http://placehold.it/615x376", alt="")
@@ -24,7 +24,7 @@ extends(src="layout.sgr")
         img(src="http://placehold.it/300x153", alt="")
         date 21 January 2017
         h3 title
-    h4 Features
+    h4.g-label Features
     .features.grid
       .card
         img(src="http://placehold.it/300x153", alt="")
@@ -42,7 +42,7 @@ extends(src="layout.sgr")
         img(src="http://placehold.it/300x600/969696/CCCCCC?text=Filmstrip", alt="")
     .ad-leaderboard
       img(src="http://placehold.it/728x90/969696/CCCCCC?text=Leaderboard", alt="")
-    h4 Blogs
+    h4.g-label Blogs
     .blogs.grid
       .card
         img(src="http://placehold.it/300x167", alt="")
