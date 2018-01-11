@@ -38,7 +38,7 @@ extends(src="layout.sgr")
         img(src="http://placehold.it/615x376", alt="")
         date 21 January 2017
         h2 title
-      .ad-filmstrip
+      .p-home-ad-filmstrip
         img(src="http://placehold.it/300x600/969696/CCCCCC?text=Filmstrip", alt="")
     .g-ad-leaderboard
       img(src="http://placehold.it/728x90/969696/CCCCCC?text=Leaderboard", alt="")
