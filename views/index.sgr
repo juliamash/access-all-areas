@@ -1,6 +1,6 @@
 extends(src="layout.sgr")
   block(name="content")
-    .ad-leaderboard
+    .g-ad-leaderboard
       img(src="http://placehold.it/728x90/969696/CCCCCC?text=Leaderboard", alt="")
     h4.g-label Latest News
     .news.grid
@@ -40,7 +40,7 @@ extends(src="layout.sgr")
         h2 title
       .ad-filmstrip
         img(src="http://placehold.it/300x600/969696/CCCCCC?text=Filmstrip", alt="")
-    .ad-leaderboard
+    .g-ad-leaderboard
       img(src="http://placehold.it/728x90/969696/CCCCCC?text=Leaderboard", alt="")
     h4.g-label Blogs
     .blogs.grid
