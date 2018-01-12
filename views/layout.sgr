@@ -13,12 +13,12 @@ html
     link(rel="stylesheet" href="css/index.css")
 
   body
-    include(src="_nav.sgr")
+    include(src="includes/_nav.sgr")
     .warning-message
       h3 Some features of this site are not supported in your browser
     main(role="main" id="{{ pageId }}")
       block(name="content")
-    include(src="_footer.sgr")
+    include(src="includes/_footer.sgr")
 
     block(name="javascript")
       script(src="js/main.js" defer)
