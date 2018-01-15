@@ -7,6 +7,6 @@ nav
     a(href="/blogs") Blogs
     a(href="/interviews") Interviews
     a(href="/analysis") Analysis
-    a(href="/event-listings") Event Listings
-    a(href="/white-book") White Book
+    a(href="/events") Event Listings
+    a(href="http://www.whitebook.co.uk/") White Book
   a.cta(href="/subscribe") Subscribe
