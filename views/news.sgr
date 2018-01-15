@@ -42,20 +42,25 @@ extends(src="layout.sgr")
         img(src="http://placehold.it/231x128", alt="")
         h3 title
         p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-      .p-news-ad-filmstrip
-        img(src="http://placehold.it/300x600/969696/CCCCCC?text=Filmstrip", alt="")
-      .issues
-        h3 Latest Issues
-        img(src="http://placehold.it/142x190", alt="")
-        img(src="http://placehold.it/142x190", alt="")
-      .newsletter
-        h3 Sign up to our newsletter
-        form
-          div
-            label(for="name") Name:
-            input(type="text" id="name" name="user_name")
-          div
-            label(for="mail") Email:
-            input(type="email" id="mail" name="user_mail")
-          .button
-            button(type="submit") Submit
+      .card
+        img(src="http://placehold.it/231x128", alt="")
+        h3 title
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+      aside
+        .p-news-ad-filmstrip
+          img(src="http://placehold.it/300x600/969696/CCCCCC?text=Filmstrip", alt="")
+        .issues
+          h3 Latest Issues
+          img(src="http://placehold.it/142x190", alt="")
+          img(src="http://placehold.it/142x190", alt="")
+        .newsletter
+          h3 Sign up to our newsletter
+          form
+            div
+              label(for="name") Name:
+              input(type="text" id="name" name="user_name")
+            div
+              label(for="mail") Email:
+              input(type="email" id="mail" name="user_mail")
+            .button
+              button(type="submit") Submit
