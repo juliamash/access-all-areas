@@ -40,4 +40,5 @@ footer.grid
     a(href="/advertising") Advertising
     a(href="/contact") Contact us
   .license
+    p Made with &#9730; in London
     a(href="http://www.mashmedia.net") &copy;Mash Media Group Limited 2017
