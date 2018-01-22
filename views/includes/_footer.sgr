@@ -1,12 +1,11 @@
 footer.grid
   .social
-    i twitter
-    i instagram
-    i linkedin
+    a(href="https://twitter.com/Access_AA")i.fa.fa-twitter(aria-hidden="true")
+    a(href="https://www.instagram.com/access_aa/")i.fa.fa-instagram(aria-hidden="true")
   .contact
     h3 Contact
-    address.white-space
-      p
+    address
+      p.white-space
         | Mash Media Group
         | 17 Union St
         | Kingston upon Thames
@@ -27,11 +26,12 @@ footer.grid
       | Bret Weekes
       | T: 020 8481 1122
       | circulation@mashmedia.net
-    //- subscribe banner here
+    a(href="/subscribe")
+      img(src="img/subscribe-banner-light.png")
   .newsletter
     h3 Newsletter
     p Sign up for our email newsletter and stay updated on all our latest storys and features
-    //- sign up form here
+    include(src="includes/_newsletter.sgr")
   .info
     h3 Information
     a(href="/issues") Issues
