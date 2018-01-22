@@ -14,7 +14,8 @@ module.exports = {
   reshape: htmlStandards({
     parser: sugarml,
     locals: (ctx) => Object.assign(locals, {pageId: pageId(ctx), foo: 'bar' }),
-    minify: env === 'production'
+    // minifying html is breaking whitespace in footer
+    // minify: env === 'production'
   }),
   postcss: cssStandards({
     parser: sugarss,
