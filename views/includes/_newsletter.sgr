@@ -1,11 +1,10 @@
-.newsletter
+.newsletter-widget
   h3 Sign up to our newsletter
   //these would do well with a flexbox https://philipwalton.github.io/solved-by-flexbox/demos/input-add-ons/
   form
-    div
+    span
       label(for="name") Name:
       input(type="text" id="name" name="user_name")
-    div
       label(for="mail") Email:
       input(type="email" id="mail" name="user_mail")
     .button
