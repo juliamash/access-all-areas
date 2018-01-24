@@ -1,5 +1,9 @@
 footer
-  padding: 0 150px
+  padding: 0 50px
+  @media (min-width: 550px)
+    padding: 0 70px
+  @media (min-width: 1245px)
+    padding: 0 150px
   background-color: var(--dark)
   color: var(--white)
 
@@ -16,3 +20,12 @@ footer
 .info a
   display: block
   margin-bottom: 10px
+
+@supports (display: grid)
+  footer
+    display: grid
+    grid-gap: 5px
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr))
+    & .social,
+    & .license
+      grid-column: 1 / -1

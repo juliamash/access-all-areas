@@ -1,4 +1,4 @@
-footer.grid
+footer
   .social
     a(href="https://twitter.com/Access_AA")i.fa.fa-twitter(aria-hidden="true")
     a(href="https://www.instagram.com/access_aa/")i.fa.fa-instagram(aria-hidden="true")
