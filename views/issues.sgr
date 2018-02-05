@@ -1,6 +1,7 @@
 extends(src="layout.sgr")
   block(name="content")
-    h4.g-label Issues Archive
+    .g-label
+      h4 Issues Archive
     .grid
       .card
         a(href="#")

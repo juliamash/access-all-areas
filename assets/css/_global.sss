@@ -46,21 +46,16 @@ h4
   font-size: 14px
 
 .g-label
-  background-color: var(--brown)
-  color: var(--white)
-  width: 74.7%
-  height: 33px
-  text-align: center
-  //this isn't working
-  vertical-align: 50%
-  line-height: 2.275em
-
-.g-label::after
   background-color: var(--dark)
-  content: '\00A0'
-  width: 85%
-  float: right
-  height: 100%
+  @media (min-width: 767px)
+    width: 74.7%
+  & h4
+    height: 33px
+    width: 128px
+    background-color: var(--brown)
+    color: var(--white)
+    line-height: 2.275em
+    text-align: center
 
 .g-ad-leaderboard
   width: 728px

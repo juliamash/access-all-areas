@@ -1,6 +1,7 @@
 extends(src="layout.sgr")
   block(name="content")
-    h4.g-label Event Listings
+    .g-label
+      h4 Event Listings
     .grid
       .spot
         img(src="http://placehold.it/482x181", alt="")
