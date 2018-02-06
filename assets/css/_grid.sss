@@ -10,36 +10,63 @@
 @supports (display: grid)
   .warning-message
     display: none
+  @media (min-width: 1245px)
 
-  .news
-    & .spot
-      grid-column: 1 / 3
-      grid-row: 1 / 3
+    .news
+      & .spot
+        grid-column: 1 / 3
+        grid-row: 1 / 3
 
-  .features
-    & .spot
-      grid-column: 2 / 4
-      grid-row: 1 / 3
-    & .p-home-ad-filmstrip
-      grid-column: 4 / 5
-      grid-row: 1 / 3
+    .features
+      & .spot
+        grid-column: 2 / 4
+        grid-row: 1 / 3
+      & .p-home-ad-filmstrip
+        grid-column: 4 / 5
+        grid-row: 1 / 3
 
-  .blogs
-    padding-bottom: 30px
+    .blogs
+      padding-bottom: 30px
 
-  .grid
-    display: grid
-    grid-gap: 15px
-    grid-template-columns: repeat(4, 1fr)
+    .grid
+      display: grid
+      grid-gap: 15px
+      grid-template-columns: repeat(4, 1fr)
 
+  @media (max-width: 1244px)
+    aside
+      display: none
+    .grid
+      display: grid
+      grid-template-columns: repeat(2, minmax(300px,1fr))
+    .news,
+    .blogs,
+    .features
+      & img
+        width: 100%
+      /* & .spot img
+        width: 300px */
+    .news
+      & :last-child
+        display: none
+    .features
+      & .spot
+        order: -1
+        @media (max-width: 767px)
+          grid-column: 1 / -1
+          
+  @media (max-width: 650px)
+    .grid
+      grid-template-columns: minmax(300px,1fr)
 #news,
 #features,
 #blogs,
 #interviews,
 #analysis,
 #events,
-  & .spot
-    grid-column: 1 / 3
-  & aside
-    grid-column: 4 / 5
-    grid-row: 1 / 4
+  @media (min-width: 1245px)
+    & .spot
+      grid-column: 1 / 3
+    & aside
+      grid-column: 4 / 5
+      grid-row: 1 / 4
